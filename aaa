@@ -572,7 +572,7 @@ function autoattack()
                                 end
                             end
                         end
-                        wait(0.4)
+                        wait(1)
                     else
                         local state = _G.autoattacka
                         local range = math.huge
@@ -594,7 +594,7 @@ function autoattack()
                                 end
                             end
                         end
-                        wait(0.4)
+                        wait(1)
                     end
                 end
             end)
