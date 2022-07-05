@@ -549,56 +549,56 @@ end
 function autoattack()
     spawn(function()
         local ismobile = game:GetService('UserInputService').TouchEnabled
-        -- if ismobile == true then
-        --     game:GetService("RunService").RenderStepped:Connect(function()
-        --         if _G.autoattacka then
-        --             if _G.hquest then
-        --                 local range = math.huge
-        --                 local player = game:GetService("Players").LocalPlayer
-        --                 local p = game.Players:GetPlayers()
-        --                 for i = 2, #p do local v = p[i].Character
-        --                     if v and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and v:FindFirstChild("HumanoidRootPart") and player:DistanceFromCharacter(v.HumanoidRootPart.Position) <= range then
-        --                         local tool = player.Character and player.Character:FindFirstChildOfClass("Tool")
-        --                         if tool and tool:FindFirstChild("Handle") then
-        --                             for i,v in next, v:GetChildren() do
-        --                                 tool:Activate()
-        --                                 if v:IsA("BasePart") then
-        --                                     firetouchinterest(tool.Handle,v,0)
-        --                                     firetouchinterest(tool.Handle,v,1)
-        --                                     _G.questdone = true
-        --                                     _G.hquest = false
-        --                                 end
-        --                             end
-        --                         end
-        --                     end
-        --                 end
-        --                 wait(0.4)
-        --             else
-        --                 local state = _G.autoattacka
-        --                 local range = math.huge
-        --                 local player = game:GetService("Players").LocalPlayer
-        --                 local p = game.Players:GetPlayers()
-        --                 for i = 2, #p do local v = p[i].Character
-        --                     if state then
-        --                         if v and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and v:FindFirstChild("HumanoidRootPart") and player:DistanceFromCharacter(v.HumanoidRootPart.Position) <= range then
-        --                             local tool = player.Character and player.Character:FindFirstChildOfClass("Tool")
-        --                             if tool and tool:FindFirstChild("Handle") then
-        --                                 for i,v in next, v:GetChildren() do
-        --                                     tool:Activate()
-        --                                     if v:IsA("BasePart") then
-        --                                         firetouchinterest(tool.Handle,v,0)
-        --                                         firetouchinterest(tool.Handle,v,1)
-        --                                     end
-        --                                 end
-        --                             end
-        --                         end
-        --                     end
-        --                 end
-        --                 wait(0.4)
-        --             end
-        --         end
-        --     end)
-        -- else
+        if ismobile == true then
+            game:GetService("RunService").RenderStepped:Connect(function()
+                if _G.autoattacka then
+                    if _G.hquest then
+                        local range = math.huge
+                        local player = game:GetService("Players").LocalPlayer
+                        local p = game.Players:GetPlayers()
+                        for i = 2, #p do local v = p[i].Character
+                            if v and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and v:FindFirstChild("HumanoidRootPart") and player:DistanceFromCharacter(v.HumanoidRootPart.Position) <= range then
+                                local tool = player.Character and player.Character:FindFirstChildOfClass("Tool")
+                                if tool and tool:FindFirstChild("Handle") then
+                                    for i,v in next, v:GetChildren() do
+                                        tool:Activate()
+                                        if v:IsA("BasePart") then
+                                            firetouchinterest(tool.Handle,v,0)
+                                            firetouchinterest(tool.Handle,v,1)
+                                            _G.questdone = true
+                                            _G.hquest = false
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                        wait(0.4)
+                    else
+                        local state = _G.autoattacka
+                        local range = math.huge
+                        local player = game:GetService("Players").LocalPlayer
+                        local p = game.Players:GetPlayers()
+                        for i = 2, #p do local v = p[i].Character
+                            if state then
+                                if v and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and v:FindFirstChild("HumanoidRootPart") and player:DistanceFromCharacter(v.HumanoidRootPart.Position) <= range then
+                                    local tool = player.Character and player.Character:FindFirstChildOfClass("Tool")
+                                    if tool and tool:FindFirstChild("Handle") then
+                                        for i,v in next, v:GetChildren() do
+                                            tool:Activate()
+                                            if v:IsA("BasePart") then
+                                                firetouchinterest(tool.Handle,v,0)
+                                                firetouchinterest(tool.Handle,v,1)
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                        wait(0.4)
+                    end
+                end
+            end)
+        else
         while wait(0.4) and _G.autoattacka do
             if _G.hquest then
                 local range = 99e9
@@ -643,7 +643,7 @@ function autoattack()
                     end
                 end
             end
-        -- end
+        end
     end)
 end
 function autoattackn(num)
