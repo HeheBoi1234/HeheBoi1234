@@ -551,6 +551,7 @@ function autoattack()
         local ismobile = game:GetService('UserInputService').TouchEnabled
         if ismobile == true then
             game:GetService("RunService").RenderStepped:Connect(function()
+                task.wait(1)
                 if _G.autoattacka then
                     if _G.hquest then
                         local range = math.huge
@@ -572,7 +573,7 @@ function autoattack()
                                 end
                             end
                         end
-                        wait(1)
+                        
                     else
                         local state = _G.autoattacka
                         local range = math.huge
@@ -594,7 +595,6 @@ function autoattack()
                                 end
                             end
                         end
-                        wait(1)
                     end
                 end
             end)
