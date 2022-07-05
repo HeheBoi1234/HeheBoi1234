@@ -599,6 +599,7 @@ function autoattack()
         --         end
         --     end)
         -- else
+        while wait(0.4) and _G.autoattacka do
             if _G.hquest then
                 local range = 99e9
                 local player = game:GetService("Players").LocalPlayer
@@ -619,7 +620,7 @@ function autoattack()
                     end
                 end
             else
-                while wait(0.4) and _G.autoattacka do
+                
                     local state = _G.autoattacka
                     local range = 99e9
                     local player = game:GetService("Players").LocalPlayer
