@@ -96,6 +96,9 @@ function DiscordLib:Window(text)
 	local MinimizeIcon = Instance.new("ImageLabel")
 	local ServersHolder = Instance.new("Folder")
 	local Userpad = Instance.new("Frame")
+	local toggle = Instance.new("ScreenGui")
+	local toggle2 = Instance.new("TextButton")
+	local UICorner = Instance.new("UICorner")
 	local UserIcon = Instance.new("Frame")
 	local UserIconCorner = Instance.new("UICorner")
 	local UserImage = Instance.new("ImageLabel")
@@ -157,6 +160,26 @@ function DiscordLib:Window(text)
 	MinimizeBtn.TextSize = 14.000
 	MinimizeBtn.BorderSizePixel = 0
 	MinimizeBtn.AutoButtonColor = false
+
+
+
+	toggle.Name = "toggle"
+	toggle.Parent = Discord
+	toggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	toggle2.Name = "toggle2"
+	toggle2.Parent = toggle
+	toggle2.BackgroundColor3 = Color3.fromRGB(32, 34, 37)
+	toggle2.Position = UDim2.new(0.109483421, 0, 0.148692802, 0)
+	toggle2.Size = UDim2.new(0, 38, 0, 41)
+	toggle2.Font = Enum.Font.SourceSansSemibold
+	toggle2.Text = "Toggle"
+	toggle2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	toggle2.TextSize = 15.000
+	toggle2.TextWrapped = true
+
+	UICorner.CornerRadius = UDim.new(0.375, 0)
+	UICorner.Parent = toggle2
 
 	MinimizeIcon.Name = "MinimizeLabel"
 	MinimizeIcon.Parent = MinimizeBtn
@@ -270,7 +293,13 @@ function DiscordLib:Window(text)
 			MinimizeBtn.BackgroundColor3 = Color3.fromRGB(32, 34, 37)
 		end
 	)
-
+	toggle2.MouseButton1Click:Connect(function()
+		if MainFrame.Visible == true then
+			MainFrame.Visible = false
+		else
+			MainFrame.Visible = true
+		end
+	end)
 	MinimizeBtn.MouseButton1Click:Connect(
 		function()
 			if minimized == false then
