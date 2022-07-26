@@ -99,7 +99,26 @@ local function MakeDraggable(topbarobject, object)
         Page.BackgroundTransparency = 0.100
         Page.BorderSizePixel = 0
         Page.Size = UDim2.new(0, 125, 0, 350)
-    
+        
+        local Toggle = Instance.new("ScreenGui")
+	    local BtnImg = Instance.new("ImageButton")
+        Toggle.Name = "Toggle"
+        Toggle.Parent = DoctorShiba
+        Toggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+        BtnImg.Name = "BtnImg"
+        BtnImg.Parent = Toggle
+        BtnImg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        BtnImg.Position = UDim2.new(0.167, 0,0.163, 0)
+        BtnImg.Size = UDim2.new(0.03, 0,0.06, 0)
+        BtnImg.Image = "rbxassetid://10210543959"
+        BtnImg.MouseButton1Up:Connect(function()
+            if DoctorShiba.Visible == false then
+                DoctorShiba.Visible = true
+            else
+                DoctorShiba.Visible = false
+            end
+        end)
         local NameHub = Instance.new("TextLabel")
         NameHub.Name = "NameHub"
         NameHub.Parent = Page
