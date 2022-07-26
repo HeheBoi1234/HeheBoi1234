@@ -884,3 +884,4 @@ local function MakeDraggable(topbarobject, object)
         end
         return uitab
     end
+return library
