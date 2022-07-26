@@ -103,7 +103,7 @@ local function MakeDraggable(topbarobject, object)
         local Toggle = Instance.new("ScreenGui")
 	    local BtnImg = Instance.new("ImageButton")
         Toggle.Name = "Toggle"
-        Toggle.Parent = Main
+        Toggle.Parent = DoctorShiba
         Toggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
         BtnImg.Name = "BtnImg"
