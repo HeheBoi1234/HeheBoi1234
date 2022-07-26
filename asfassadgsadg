@@ -113,10 +113,10 @@ local function MakeDraggable(topbarobject, object)
         BtnImg.Size = UDim2.new(0.03, 0,0.06, 0)
         BtnImg.Image = "rbxassetid://10210543959"
         BtnImg.MouseButton1Up:Connect(function()
-            if Main.Visible == false then
-                Main.Visible = true
+            if game:GetService("CoreGui").VietHub.Main.Visible == false then
+                game:GetService("CoreGui").VietHub.Main.Visible = true
             else
-                Main.Visible = false
+                game:GetService("CoreGui").VietHub.Main.Visible = false
             end
         end)
         local NameHub = Instance.new("TextLabel")
