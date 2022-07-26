@@ -158,7 +158,7 @@ local function MakeDraggable(topbarobject, object)
     
         local uitab = {}
     
-        function uitab:Tab(text,image)
+        function uitab:Server(text,image)
             local Image = image or 6023426915
     
             local PageButton = Instance.new("TextButton")
