@@ -103,7 +103,7 @@ local function MakeDraggable(topbarobject, object)
         local Toggle = Instance.new("ScreenGui")
 	    local BtnImg = Instance.new("ImageButton")
         Toggle.Name = "Toggle"
-        Toggle.Parent = DoctorShiba
+        Toggle.Parent = Main
         Toggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
         BtnImg.Name = "BtnImg"
@@ -113,10 +113,10 @@ local function MakeDraggable(topbarobject, object)
         BtnImg.Size = UDim2.new(0.03, 0,0.06, 0)
         BtnImg.Image = "rbxassetid://10210543959"
         BtnImg.MouseButton1Up:Connect(function()
-            if DoctorShiba.Visible == false then
-                DoctorShiba.Visible = true
+            if Main.Visible == false then
+                Main.Visible = true
             else
-                DoctorShiba.Visible = false
+                Main.Visible = false
             end
         end)
         local NameHub = Instance.new("TextLabel")
