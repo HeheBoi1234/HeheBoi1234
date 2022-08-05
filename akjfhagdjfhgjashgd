@@ -140,7 +140,7 @@ function SomeLib:Window(text,mainclr,cls)
     local Toggle = Instance.new("ScreenGui")
 	local BtnImg = Instance.new("ImageButton")
     Toggle.Name = "Toggle"
-    Toggle.Parent = DoctorShiba
+    Toggle.Parent = 
     Toggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     BtnImg.Name = "BtnImg"
@@ -183,7 +183,25 @@ function SomeLib:Window(text,mainclr,cls)
 			end
 		end)
 	end)
+    local Toggle = Instance.new("ScreenGui")
+	local BtnImg = Instance.new("ImageButton")
+    Toggle.Name = "Toggle"
+    Toggle.Parent = MainFrame
+    Toggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
+    BtnImg.Name = "BtnImg"
+    BtnImg.Parent = Toggle
+    BtnImg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    BtnImg.Position = UDim2.new(0.167, 0,0.163, 0)
+    BtnImg.Size = UDim2.new(0.03, 0,0.06, 0)
+    BtnImg.Image = "rbxassetid://10474547159"
+    BtnImg.MouseButton1Up:Connect(function()
+        if game:GetService("CoreGui").VietHub.Main.Visible == false then
+            game:GetService("CoreGui").VietHub.Main.Visible = true
+        else
+            game:GetService("CoreGui").VietHub.Main.Visible = false
+        end
+    end)
 	GlowFrame.Name = "GlowFrame"
 	GlowFrame.Parent = MainFrame
 	GlowFrame.BackgroundTransparency = 1
