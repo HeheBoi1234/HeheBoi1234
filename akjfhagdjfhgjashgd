@@ -167,7 +167,7 @@ function SomeLib:Window(text,mainclr,cls)
     local Toggle = Instance.new("ScreenGui")
 	local BtnImg = Instance.new("ImageButton")
     Toggle.Name = "Toggle"
-    Toggle.Parent = MainFrame
+    Toggle.Parent = Discord
     Toggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     BtnImg.Name = "BtnImg"
