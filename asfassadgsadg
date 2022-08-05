@@ -107,7 +107,7 @@ Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 function SomeLib:Window(text,mainclr,cls)
 	local PresetColor = mainclr or Color3.fromRGB(255,255,255) or _G.Color
 	local CloseBind = cls or Enum.KeyCode.RightControl or _G.Toggle
-    	local currentservertoggled = ""
+    local currentservertoggled = ""
 	local minimized = false
 	local fs = false
 	local settingsopened = false
@@ -167,7 +167,7 @@ function SomeLib:Window(text,mainclr,cls)
     local Toggle = Instance.new("ScreenGui")
 	local BtnImg = Instance.new("ImageButton")
     Toggle.Name = "Toggle"
-    Toggle.Parent = MainFrame
+    Toggle.Parent = Discord
     Toggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     BtnImg.Name = "BtnImg"
