@@ -177,7 +177,7 @@ function SomeLib:Window(text,mainclr,cls)
     BtnImg.Size = UDim2.new(0.03, 0,0.06, 0)
     BtnImg.Image = "rbxassetid://10474547159"
     BtnImg.MouseButton1Up:Connect(function()
-        if game:GetService("CoreGui").VietHub.Main.Visible == false then
+        if game:GetService("CoreGui").VietHub.MainFrame.Visible == false then
             game:GetService("CoreGui").VietHub.MainFrame.Visible = true
         else
             game:GetService("CoreGui").VietHub.MainFrame.Visible = false
