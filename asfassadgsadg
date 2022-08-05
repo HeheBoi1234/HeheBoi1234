@@ -178,9 +178,9 @@ function SomeLib:Window(text,mainclr,cls)
     BtnImg.Image = "rbxassetid://10474547159"
     BtnImg.MouseButton1Up:Connect(function()
         if game:GetService("CoreGui").VietHub.Main.Visible == false then
-            game:GetService("CoreGui").VietHub.Main.Visible = true
+            game:GetService("CoreGui").VietHub.MainFrame.Visible = true
         else
-            game:GetService("CoreGui").VietHub.Main.Visible = false
+            game:GetService("CoreGui").VietHub.MainFrame.Visible = false
         end
     end)
 	GlowFrame.Name = "GlowFrame"
